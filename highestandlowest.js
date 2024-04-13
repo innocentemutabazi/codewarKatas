@@ -11,7 +11,7 @@ Output string must be two numbers separated by a single space, and highest numbe
 
 function highAndLow(numbers){
   var numarray = numbers.split(' ');
-  var digitsarray= numarray.map(Number)
+  var digitsarray= numarray.map(Number);
   var minnumber = Math.min(...digitsarray);
   var maxnumber = Math.max(...digitsarray);
   
