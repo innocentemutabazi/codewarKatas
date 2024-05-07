@@ -9,8 +9,6 @@ function findShort(s) {
     const lengtharr = []
     for (const arry of arr) {
         lengthobj[arry] = arry.length
-
-        
     }
 
     for (key in lengthobj){
