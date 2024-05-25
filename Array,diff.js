@@ -16,3 +16,4 @@ function arrayDiff(a,b){
    }}
    return arr
  } 
+console.log(arrayDiff([1,2,2,2,3],[2]))
