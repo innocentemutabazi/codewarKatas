@@ -28,3 +28,24 @@ function XO(str) {
         return true
     }else return false
 }
+
+// A bit of refractoring
+
+function XO(str) {
+    let resobj = {}
+    for (let letter of str.toLowerCase()) {
+        if (letter === 'x') {
+            if (!resobj[letter]) {
+                resobj[letter] = 0
+            } resobj[letter]++
+        }
+        if (letter === 'o') {
+            if (!resobj[letter]) {
+                resobj[letter] = 0
+            } resobj[letter]++
+
+
+        }
+    }
+    return resobj['x']===resobj['o']
+}
