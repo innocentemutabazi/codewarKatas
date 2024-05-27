@@ -27,5 +27,10 @@ function narcissistic(value) {
     }
     let sum = newarray.reduce((accum,curr)=>accum + curr)
     return value === sum
-  }
+}
 
+function narcissistic(value) {
+    let array = value.toString().split('')
+    let sum = array.reduce((accum,curr)=> parseInt(accum) + Math.pow(parseInt(curr),array.length),0)
+    return value === sum
+  }
