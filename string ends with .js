@@ -8,3 +8,7 @@
 function solution(str, ending){
     return  str.split('').slice((str.split('').length-ending.split('').length)).join`` === ending
 }
+
+//A bit of refractoring
+
+solution=(str, ending) => str.endsWith(ending)
