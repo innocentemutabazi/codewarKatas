@@ -26,3 +26,9 @@ function generateHashtag(str) {
     return finalres
 }
 
+// A bit of refractoring
+function generateHashtag(str) {
+    !str.includes(' ') ? finalres = '#' + str.charAt(0).toUpperCase() + str.slice(1) : finalres = str.split(' ').reduce((acc,curr)=>acc+curr.charAt(0).toUpperCase()+curr.slice(1),'#');
+    return finalres.length > 140 || (finalres.length === 1 && finalres.includes('#')) ? false :  finalres
+}
+   
