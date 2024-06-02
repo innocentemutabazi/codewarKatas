@@ -8,3 +8,11 @@ function sumTwoSmallestNumbers(numbers) {
     let newarr = numbers.sort((a,b)=> a-b)
     return newarr[0] + newarr[1]
 }
+console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]))
+
+// A bit of refractoring
+
+function sumTwoSmallestNumbers(numbers) {
+    numbers.sort((a, b) => a - b)
+    return numbers[0] + numbers[1]
+}
