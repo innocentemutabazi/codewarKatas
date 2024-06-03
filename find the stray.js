@@ -5,9 +5,9 @@
 
 // The input array will always be valid! (odd-length >= 3)
 
-// Examples
-// [1, 1, 2] ==> 2
-// [17, 17, 3, 17, 17, 17, 17] ==> 3
+Examples
+[1, 1, 2] ==> 2
+[17, 17, 3, 17, 17, 17, 17] ==> 3
 function stray(numbers) {
     let resobj = {}
     for (let num of numbers) {
@@ -21,5 +21,11 @@ function stray(numbers) {
             return key
         }
     }
+}
+// A bit of refractoring
+function stray(numbers){
+    numbers.sort((a,b)=>a-b)
+    if (numbers[0] !== numbers[1]) return numbers[0]
+    return numbers[numbers.le]
 }
 console.log(stray([1, 1, 2]))
