@@ -40,7 +40,7 @@ function solution(number) {
 
         if (numb.length === 3) {
             if (parseInt(numb) < 400) {
-                numarray[numarray.indexOf(numb)] = 'C '.repeat(Math.floor(parseInt(numb) / romanobj['C']))
+                numarray[numarray.indexOf(numb)] = 'C'.repeat(Math.floor(parseInt(numb) / romanobj['C']))
 
             }
             if (parseInt(numb) === 400) {
