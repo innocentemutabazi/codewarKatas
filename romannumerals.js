@@ -78,7 +78,7 @@ function solution(number) {
         }
         if (numb.length === 1) {
             if (parseInt(numb) < 4) {
-                numarray[numarray.indexOf(numb)] = 'I'.repeat(Math.floor(parseInt(numb) / romanobj['X']))
+                numarray[numarray.indexOf(numb)] = 'I'.repeat(Math.floor(parseInt(numb) / romanobj['I']))
 
             }
             if (parseInt(numb) === 4) {
@@ -97,8 +97,5 @@ function solution(number) {
             }
         }
     }
-    return numarray.join('')
+    return numarray.join('').trim()
 }
-
-
-console.log(solution(3999))
