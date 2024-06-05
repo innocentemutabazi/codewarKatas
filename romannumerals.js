@@ -88,7 +88,7 @@ function solution(number) {
                 numarray[numarray.indexOf(numb)] = 'V'
 
             }
-            if (parseInt(numb) > 50 && parseInt(numb) !== 90) {
+            if (parseInt(numb) > 5 && parseInt(numb) !== 9) {
                 numarray[numarray.indexOf(numb)] = 'V' + 'I'.repeat(parseInt(numb) - 5)
 
             }
