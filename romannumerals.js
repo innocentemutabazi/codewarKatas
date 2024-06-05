@@ -64,7 +64,7 @@ function solution(number) {
             if (parseInt(numb) === 40) {
                 numarray[numarray.indexOf(numb)] = 'XL'
             }
-            if (parseInt(numb) === 500) {
+            if (parseInt(numb) === 50) {
                 numarray[numarray.indexOf(numb)] = 'L'
 
             }
