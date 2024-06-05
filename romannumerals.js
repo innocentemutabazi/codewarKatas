@@ -13,7 +13,7 @@ function solution(number) {
         'D': 500,
         'M': 1000,
     }
-    for (let numb of numarray) {
+    for (let numb of numarray.reverse()) {
         if (numb.length === 4) {
             numarray[numarray.indexOf(numb)] = 'M'.repeat(Math.floor(parseInt(numb) / romanobj['M']))
         }
@@ -58,7 +58,7 @@ function solution(number) {
         }
         if (numb.length === 2) {
             if (parseInt(numb) < 40) {
-                numarray[numarray.indexOf(numb)] = 'X '.repeat(Math.floor(parseInt(numb) / romanobj['X']))
+                numarray[numarray.indexOf(numb)] = 'X'.repeat(Math.floor(parseInt(numb) / romanobj['X']))
 
             }
             if (parseInt(numb) === 40) {
@@ -97,5 +97,7 @@ function solution(number) {
             }
         }
     }
+    console.log(numarray)
     return numarray.join('').trim()
 }
+console.log(solution(11))
