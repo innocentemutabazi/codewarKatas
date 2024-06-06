@@ -3,7 +3,6 @@ function solution(number) {
     for (let i = 0; i < numarray.length; i++) {
         numarray[i] += '0'.repeat(i)
     }
-    console.log(numarray)
     let romanobj = {
         'I': 1,
         'V': 5,
@@ -19,7 +18,7 @@ function solution(number) {
         }
         if (numb.length === 3) {
             if (parseInt(numb) < 400) {
-                numarray[numarray.indexOf(numb)] = 'C '.repeat(Math.floor(parseInt(numb) / romanobj['C']))
+                numarray[numarray.indexOf(numb)] = 'C'.repeat(Math.floor(parseInt(numb) / romanobj['C']))
 
             }
             if (parseInt(numb) === 400) {
@@ -97,7 +96,5 @@ function solution(number) {
             }
         }
     }
-    console.log(numarray)
     return numarray.join('').trim()
 }
-console.log(solution(11))
