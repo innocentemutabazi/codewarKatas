@@ -14,5 +14,15 @@ function persistence(num) {
         multiplications++
     }
     return multiplications
- } console.log(persistence(39))
+ } 
 
+// A bit of refractoring
+function persistence(num){
+    let times=0
+    while(num.toString().split('').length > 1){
+       num= num.toString().split('').map(Number).reduce((a,b)=>a*b,1)
+       times++
+    }
+    return times
+}
+console.log(persistence(39))
