@@ -7,12 +7,12 @@
 // 4 --> 0 (because 4 is already a one-digit number, there is no multiplication)
 function persistence(num) {
     let numarray = num.toString().split('')
-    console.log(numarray)
-    let nooffopp = 0
+    let multiplications = 0
     while (numarray.length > 1) {
        let product = numarray.reduce((acc, curr) => parseInt(acc) * parseInt(curr), 1)
         numarray = product.toString().split('')
-        nooffopp++
+        multiplications++
     }
-    return nooffopp
+    return multiplications
  } console.log(persistence(39))
+
