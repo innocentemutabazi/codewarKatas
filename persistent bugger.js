@@ -20,7 +20,7 @@ function persistence(num) {
 function persistence(num){
     let times=0
     while(num.toString().split('').length > 1){
-       num= num.toString().split('').map(Number).reduce((a,b)=>a*b,1)
+       num = num.toString().split('').map(Number).reduce((a,b)=>a*b,1)
        times++
     }
     return times
