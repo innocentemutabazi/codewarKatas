@@ -15,15 +15,9 @@ function high(x) {
     let alpha = 'abcdefghijklmnopqrstuvwxyz'
     let resobj = {}
     for (let word of x) {
-        resobj[word] = word.split('')
+        resobj[word] = word.split('').map(value => alpha.indexOf(value) + 1).reduce((a, b) => a + b, 0)
     }
-    for (let key in resobj) {
-        resobj[key] = resobj[key].map(value => alpha.indexOf(value) + 1).reduce((a, b) => a + b, 0)
-    }
-
     return Object.entries(resobj).sort(([, a], [, b]) => b - a)[0][0]
-
-
 }
 
 console.log(high('man i need a taxi up to ubud'))
